@@ -110,8 +110,7 @@ I wanted to learn:
 - Deployment
 
 ## Author
-
-Shubham Kumar
+Komal Kumari
 
 GitHub: https://github.com/kkkr1484
 
