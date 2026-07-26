@@ -5,7 +5,16 @@ import { askQuestion } from "./rag.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://rococo-dragon-7d7cf5.netlify.app",
+      "http://localhost:5173",
+      "http://localhost:3000"
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -38,8 +47,7 @@ app.post("/generate", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log(
-    "🚀 Server running at http://localhost:3000"
-  );
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });

@@ -5,7 +5,7 @@ This project is a simple Retrieval-Augmented Generation (RAG) chatbot that can a
 I built it to understand how modern AI applications combine vector search, embeddings, and large language models to answer questions using external knowledge instead of relying only on the model's training data.
 
 # Project demo
-![alt text](home.png)
+![alt text](screenshot/home.png)
 
 ## What it does
 

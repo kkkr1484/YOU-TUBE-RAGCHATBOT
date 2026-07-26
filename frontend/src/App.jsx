@@ -1,18 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
 function App() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
   const askQuestion = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:3000/generate",
-        {
-          question,
-        }
-      );
+      const response = await axios.post(`${API_URL}/generate`, {
+        question,
+      });
 
       setAnswer(response.data.answer);
     } catch (error) {
